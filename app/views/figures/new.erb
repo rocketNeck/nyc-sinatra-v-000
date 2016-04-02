@@ -1,23 +1,22 @@
 <h2>Create a new figure.</h2>
 
 <form action="/figures" method="post">
-  <label>Figure Name</label>
-  <input type="text" name="figure_name">
-
-  <lable>Select title.</lable>
-    <%@titles.each do |title|%>
-      <input type="checkbox" id="<%=title.name%>" name="titles[]" value="<%=title.id%>">
-    <%end%>
-    <br>
-  <label>Or add new Title</label>
-  <input type="text" name="title_name">
-    <br>
-  <lable>Select Landmark </lable>
-    <%@landmarks.each do |landmark|%>
-      <input type="checkbox" id="<%=landmark.name%>" name="landmarks[]" value="<%=landmark.id%>">
-    <%end%>
-    <br>
-  <label>Or add new Landmark.</label>
-  <input type="text" name="landmark_name">
-  <input type="submit" value="Create">
+  <label>Figure Name:</label>
+  <input type="text" name="figure[name]" id="figure_name">
+  <p>Select title</p>
+  <%@titles.each do |title|%>
+  <label for="title_<%=title.id%>"><%=title.name%></label>
+  <input type="checkbox" id="title_<%=title.id%>" name="figure[title_ids][]" value="<%=title.name%>">
+  <%end%>
+  <p>Or add a new Title</p>
+  <p>Title: <input type="text" name="title[name]" id="new_title"></p>
+  <p>Select Landmark</p>
+  <%@landmarks.each do |landmark|%>
+  <label for="title_<%=landmark.id%>"><%=landmark.name%></label>
+  <input type="checkbox" id="landmark_<%=landmark.id%>" name="figure[landmark_ids][]">
+  <%end%>
+  <p>Or add a new Landmark</p>
+  <p>Landmark Name: <input type="text" name="landmark[name]"></p>
+  <p>Year Compleated: <input type="test" name="landmark[year_completed]"></p>
+  <input type="submit" value="Create New Figure">
 </form>

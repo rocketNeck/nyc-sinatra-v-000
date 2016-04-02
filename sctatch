@@ -1,0 +1,18 @@
+this is what params should look like
+{
+"figure"=>{"name"=>"Doctor Who","title_ids"=>["on"]},
+ "title"=>{"name"=>""},
+ "landmark"=>{"name"=>"","year_completed"=>""}
+}
+
+{
+"figure"=>{"name"=>"Doctor Who", "landmark_ids"=>"on"},
+"title"=>{"name"=>""},
+"landmark"=>{"name"=>"", "year_completed"=>""}
+}
+
+{
+"figure"=>{"name"=>"Doctor Who"},
+"title"=>{"name"=>"Time Lord"},
+"landmark"=>{"name"=>"","year_completed"=>""}
+}

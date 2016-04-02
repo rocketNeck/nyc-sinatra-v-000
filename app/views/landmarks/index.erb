@@ -1,0 +1,6 @@
+<%@landmarks.each do |l| %>
+<a href="/landmarks/<%=l.id%>/edit">
+  <h1><%=l.name%></h1>
+</a>
+<p><%=l.year_completed%></p>
+<%end%>

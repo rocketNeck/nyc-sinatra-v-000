@@ -1,15 +1,14 @@
 <h1><%= @figure.name %></h1>
-
+<a href="/figures/<%=@figure.id%>/edit">-edit</a>
 <h2>Titles</h2>
 <ul>
-<%@figure.titles.each do |title| %>
-<li><%=title.name%></li>
-<%end%>
+  <%@figure.titles.each do |title| %>
+  <li><%=title.name%></li>
+  <%end%>
 </ul>
 <h2>landmarks</h2>
 <ul>
-<%@figure.titles.each do |title| %>
-<li><%=title.name%></li>
-<%end%>
+  <%@figure.landmarks.each do |landmark| %>
+  <li><%=landmark.name%></li>
+  <%end%>
 </ul>
-<a href="/figures/<%=@figure.id%>/edit"></a>
